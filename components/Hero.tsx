@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function Hero() {
     return (
-        <section className="min-h-screen flex flex-col justify-center section-padding pt-32">
+        <section className="flex flex-col justify-center section-padding pt-32 pb-16 md:pt-48 md:pb-24">
             <div className="flex flex-col md:flex-row items-center gap-12">
                 <motion.div
                     initial={{ opacity: 0, x: -20 }}

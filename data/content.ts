@@ -2,7 +2,49 @@ export const portfolioContent = {
     name: "Anish",
     role: "CS Student • Java & DSA • Backend-leaning",
     bio: "I'm a computer science student focused on building efficient, scalable backend systems. I enjoy solving complex problems using Java and exploring modern web technologies to create clean user experiences.",
-    about: "I am currently pursuing my degree in Computer Science. My passion lies in understanding how large-scale systems work under the hood. I spend most of my time coding in Java, diving deep into Data Structures and Algorithms, and learning about cloud architecture. When I'm not studying, I'm building side projects that challenge my technical boundaries.",
+    about: [
+        {
+            title: "Who I Am",
+            items: [
+                "Hello, World! I am Anish.",
+                "Computer Science student focused on software.",
+                "Enjoy building practical, usable applications.",
+                "Experimenting with systems for real-world problems."
+            ]
+        },
+        {
+            title: "What I Work With",
+            items: [
+                "Java, Data Structures & Algorithms.",
+                "Modern web: Next.js, React, TypeScript.",
+                "Backend services and databases like Firebase."
+            ]
+        },
+        {
+            title: "Projects & Experience",
+            items: [
+                "Hotel Management System used in a real hotel.",
+                "Inventory Management System with cloud syncing.",
+                "Algorithm-based tools like Minesweeper Graph AI."
+            ]
+        },
+        {
+            title: "What I Like Building",
+            items: [
+                "Full-stack and backend-heavy systems.",
+                "Tools people use in real environments.",
+                "Systems prioritizing robust design and data handling."
+            ]
+        },
+        {
+            title: "Currently Learning",
+            items: [
+                "Always learning, building, and improving.",
+                "Taking on projects that push my boundaries.",
+                "Looking to build something interesting together."
+            ]
+        }
+    ],
     socials: {
         github: "https://github.com/anish435",
         linkedin: "https://www.linkedin.com/in/kotikalapudi-anish-1ba765381",
@@ -14,22 +56,19 @@ export const portfolioContent = {
     },
     experience: [
         {
-            title: "Software Engineering Intern",
-            organization: "Tech Corp",
-            period: "June 2024 - Present",
+            title: "Student Developer",
+            organization: "Independent Projects",
+            period: "2025 — ∞",
             bullets: [
-                "Developing microservices using Spring Boot.",
-                "Optimized database queries, reducing response time by 20%.",
-                "Collaborating with the frontend team to integrate RESTful APIs.",
-            ],
-        },
-        {
-            title: "Open Source Contributor",
-            organization: "Various Projects",
-            period: "2023 - 2024",
-            bullets: [
-                "Contributed to several Java-based open-source libraries.",
-                "Improved documentation and fixed critical bugs in core modules.",
+                "Implement robust frontend solutions for web and mobile platforms.",
+                "Developed a hotel management and billing system using Next.js and Firebase.",
+                "Implemented transaction management and account handling logic.",
+                "Implemented a Minesweeper AI using graph algorithms and constraint solving.",
+                "Designed Firestore schema for rooms, stays, billing.",
+                "Built inventory tracking with cloud sync.",
+                "Deployed and maintained app on Vercel.",
+                "Fixed production bugs and data sync issues.",
+                "Analyze technical capabilities and provide optimal solutions.",
             ],
         },
     ],

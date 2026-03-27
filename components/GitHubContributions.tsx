@@ -4,9 +4,11 @@ import { GitHubCalendar } from "react-github-calendar";
 import { portfolioContent } from "@/data/content";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 
 export default function GitHubContributions() {
     const [mounted, setMounted] = useState(false);
+    const { resolvedTheme } = useTheme();
 
     useEffect(() => {
         setMounted(true);
@@ -21,22 +23,32 @@ export default function GitHubContributions() {
     const githubUsername = portfolioContent.socials.github.split("/").pop() || "anish435";
 
     return (
-        <div className="bg-zinc-50 dark:bg-zinc-900/20 border border-zinc-200 dark:border-zinc-800/50 rounded-3xl p-6 md:p-8">
-            <div className="w-full overflow-hidden flex justify-center py-4">
-                <div className="transform scale-[0.85] md:scale-100 origin-center">
+        <div className="bg-zinc-50 dark:bg-zinc-900/20 border border-zinc-200 dark:border-zinc-800/50 rounded-3xl p-6 md:p-8 overflow-hidden">
+            <div className="w-full overflow-x-auto no-scrollbar py-4" dir="rtl">
+                <div className="min-w-max px-2 flex justify-end" dir="ltr">
                     <GitHubCalendar
                         username={githubUsername}
                         fontSize={12}
-                        blockSize={13}
+                        blockSize={14}
                         blockMargin={5}
-                        // colorScheme is determined automatically by next-themes usually, 
-                        // but we can pass it explicitly if needed.
+                        colorScheme={resolvedTheme === 'dark' ? 'dark' : 'light'}
                         theme={{
                             light: ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"],
                             dark: ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"],
                         }}
                         showColorLegend={true}
                         showTotalCount={true}
+                        tooltips={{
+                            activity: {
+                                text: (activity) => {
+                                    const date = new Date(activity.date);
+                                    const formattedDate = date.toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' });
+                                    const count = activity.count === 0 ? 'No' : activity.count;
+                                    const suffix = activity.count === 1 ? '' : 's';
+                                    return `${count} contribution${suffix} on ${formattedDate}`;
+                                },
+                            }
+                        }}
                     />
                 </div>
             </div>

@@ -19,9 +19,23 @@ export default function Home() {
             <Hero />
 
             <Section id="about" title="About">
-                <p className="text-zinc-400 text-lg leading-relaxed max-w-2xl">
-                    {portfolioContent.about}
-                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12 max-w-4xl">
+                    {portfolioContent.about.map((section, index) => (
+                        <div key={index} className="space-y-4">
+                            <h3 className="text-lg font-bold tracking-tight text-foreground/90 pb-1">
+                                {section.title}
+                            </h3>
+                            <ul className="space-y-2.5">
+                                {section.items.map((item, i) => (
+                                    <li key={i} className="text-zinc-500 dark:text-zinc-400 leading-relaxed flex items-start gap-3">
+                                        <span className="text-blue-500 mt-1.5 text-[10px]">◆</span>
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
             </Section>
 
             <Section id="experience" title="Experience">
