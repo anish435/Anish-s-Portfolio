@@ -1,6 +1,6 @@
 export const portfolioContent = {
     name: "Anish",
-    role: "CS Student • Java & DSA • Backend-leaning",
+    role: "CS Student • Java & DSA • Backend Developer",
     bio: "I'm a computer science student focused on building efficient, scalable backend systems. I enjoy solving complex problems using Java and exploring modern web technologies to create clean user experiences.",
     about: [
         {

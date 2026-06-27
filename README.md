@@ -1,6 +1,6 @@
 # Modern Developer Portfolio 🚀
 
-A high-performance, premium personal portfolio architected with **Next.js 15** and **TypeScript**. This project serves as a digital showcase of engineering skills, focusing on backend-leaning expertise while delivering a high-end visual experience.
+A high-performance, premium personal portfolio architected with **Next.js 15** and **TypeScript**. This project serves as a digital showcase of engineering skills, focusing on backend development expertise while delivering a high-end visual experience.
 
 ## 📖 About This Project
 
